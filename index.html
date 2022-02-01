@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/h.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <title>Garima</title>
+</head>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Comforter&family=Quintessential&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Comforter&family=Quintessential&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Comforter&family=Quintessential&family=Ubuntu:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan2&family=Comforter&family=Quintessential&family=Ubuntu:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Comforter&family=Fira+Sans:ital@1&family=Quintessential&family=Ubuntu:wght@600&display=swap');
+/* Variables */
+
+
+*{
+margin: 0;
+padding: 0;
+}
+
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #004152;
+  --secondary-color: #860610;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+
+
+/* CSS Resets end */
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 7px 12px #004152;
+}
+
+nav h1 {
+  color: var(--primary-color);
+  /* font-family: "Poppins", Arial !important;
+  font-weight: lighter; */
+  font-family: 'Quintessential', cursive;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+
+  font-family: 'Comforter', cursive;
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+  font-family: "Poppins", Arial !important;
+  /* font-weight: lighter; */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #004152;
+}
+
+.nav-link{
+  color: #004152;
+}
+
+.edu{
+  /* font-family: 'Baloo Bhaijaan 2', cursive;
+
+  font-family: 'Comforter', cursive;
+
+  font-family: 'Quintessential', cursive; */
+
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-weight: 800;
+  color: #004152;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+          font-family: 'Comforter', cursive;
+          font-family: 'Quintessential', cursive;
+}
+
+.bi{
+  width: 25rem;
+  height: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 4px 4px 15px 5px var(--primary-shadow);
+  background-color: #ffffff;
+  color: #004152;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-family: 'Comforter', cursive;
+  font-family: 'Quintessential', cursive;
+ 
+  
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+/* Navbar ends */
+
+/* Hero section */
+
+#education{
+  background-color: rgb(231, 228, 228);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 70.75rem;
+  margin: auto;
+}
+
+.hero img {
+  height: 60%;
+  width: 60%;
+}
+
+.bio {
+  width: 45rem;
+  height: 18rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 4px 4px 15px 5px var(--primary-shadow);
+  background-color: #104957;
+  color: white;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-family: 'Comforter', cursive;
+
+  font-family: 'Quintessential', cursive;
+  
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+/* Hero section ends */
+
+/* More about */
+.more-about {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+/* More about ends */
+
+/* Skills section */
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  background-color: rgb(231, 228, 228);
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+/* Skills section ends */
+
+/* Projects section */
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #004152;
+  /* font-family: 'Baloo Bhaijaan 2', cursive;
+  font-family: 'Comforter', cursive;
+  font-family: 'Quintessential', cursive; */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 25rem;
+  height: 35rem;
+  padding: 1rem;
+}
+
+.project-container a{
+  border: 2px solid #004152; 
+  padding: 1rem; 
+  border-radius: 10%;
+   background-color: #004152; 
+    color: white;
+}
+
+.project-container a:hover{
+  color: #004152;
+  background-color: white;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+/* Projects section ends */
+
+/* Contacts section */
+.contact {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+/* Contacts section ends */
+
+/* Social buttons */
+/* .socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+*/
+
+.socicon {
+  width: 5rem;
+  height: 5rem;
+} 
+/* Social button ends */
+
+/* Scroll to top button */
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+/* Scroll to top button ends */
+
+/* Footer section */
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+/* Footer section ends */
+
+/* General (utilities) */
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 4px 4px 15px 5px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+    height: 37.5rem;
+    width: 30rem;
+  }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+
+  .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 23.75rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+}
+
+</style>
+<body>
+    <div class="container-sm">
+        <nav class="position-sticky">
+            <h1 style="color: #004152; font-size: 1.5rem;"> &#x2661; Garima Dhingra</h1>
+            <ul class="navigation" style="color: #004152;">
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#education" class="nav-link">Education</a></li>
+              <li><a href="#projects" class="nav-link">Work Experience</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+                <!-- <ion-icon class="times" name="close-outline"></ion-icon> --> 
+              </button>
+          </nav>
+    </div>
+
+    <div class="container-sm">
+        <!-- Hero Section -->
+        <section class="hero" id="about" style="margin-bottom: 4%;">
+          <img
+            src="assets/images/g.jpeg"
+            alt="jane-doe"
+            loading="lazy"
+            class="hero-img"
+          />
+          <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-title" style="text-align: center; padding-top: 8%; font-size: 1.8rem;">Hey! I'm Garima Dhingra</h2> <br>
+            <p class="bio-text" style="text-align: center; font-family: Arial, Helvetica, sans-serif;">
+              An undergraduate pursuing Bachelors of computer application. I am a person with a lot of enthusiasm to learn new things. I'm into Development, Blogging and Freelancing.
+            </p>
+          </div>
+        </section>
+    
+     </div>
+
+    <div class="container-sm">
+
+        <div class="container-sm">
+            <section class="projects" id="education" style="margin-bottom: 4%; text-align: center; padding-bottom: 5%;">
+              <h2 style="font-size: 3rem;  margin-bottom: 2.5%;" class="edu" >Education</h2>
+              <div class="projects-container" >
+                <div class="project-container project-card bi animate__animated animate__shakeX" style="width: 22rem;
+                height: 27rem;">
+                  <h2 style="text-align: center; padding-top: 17%; font-size: 1.8rem; color: rgb(41, 40, 40);">Seth Jai Parkash Mukand Lal Institute of Engineering and Technology</h2>
+                  <p class="bio-text" style="text-align: center; font-family: Arial, Helvetica, sans-serif; padding-top: 9%;">
+                    <span style="font-size: 1.4rem;">Graduation &nbsp;</span>(2019 - 2022)
+                    <div style="font-size: 1.7rem; text-align: center; font-family: Arial, Helvetica, sans-serif; padding-top: 4%; color: rgb(41, 40, 40); font-weight: 600;">82.75% &nbsp;&nbsp;</div>
+                   </p>
+                </div>
+        
+                <div class="project-container project-card bi animate__animated animate__shakeX" style="width: 22rem;
+                height: 27rem;">
+                  <h2 style="text-align: center; padding-top: 36%; font-size: 1.8rem; color: rgb(41, 40, 40);">Guru Nanak Senior Secondary School</h2>
+                  <p class="bio-text" style="text-align: center; font-family: Arial, Helvetica, sans-serif; padding-top: 18%;">
+                    <span style="font-size: 1.4rem;">Senior Secondary &nbsp;</span>(2018 - 2019)
+                    <div style="font-size: 1.7rem; text-align: center; font-family: Arial, Helvetica, sans-serif; padding-top: 4%; color: rgb(41, 40, 40); font-weight: 600;;">71% &nbsp;&nbsp;</div>
+                   </p>
+                </div>
+
+
+                <div class="project-container project-card bi animate__animated animate__shakeX" style="width: 22rem;
+                height: 27rem;">
+                  <h2 style="text-align: center; padding-top: 36%; font-size: 1.9rem; color: rgb(41, 40, 40);">S D Girls Senior Secondary School</h2>
+                  <p class="bio-text" style="text-align: center; font-family: Arial, Helvetica, sans-serif; padding-top: 18%;">
+                    <span style="font-size: 1.4rem;">Secondary &nbsp;</span>(2016 - 2017)
+                    <div style="font-size: 1.7rem; text-align: center; font-family: Arial, Helvetica, sans-serif; padding-top: 4%; color: rgb(41, 40, 40); font-weight: 600; ;">84.8% &nbsp;&nbsp;</div>
+                   </p>
+                </div>
+        
+                
+              </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="container-sm">
+        <section class="projects" id="projects" style="margin-bottom: 6%; margin-top: 1%; text-align: center;">
+          <h2 style="font-size: 3rem;  margin-bottom: 4%; margin-top: 1%;" class="edu" >Work Experience</h2>
+          <div class="projects-container">
+            <div class="project-container project-card animate__animated animate__shakeX">
+              <h2 style=" font-family: 'Fira Sans', sans-serif; font-size: 2rem; margin-top: 15%; font-weight: 500;">Blogger</h2>
+              <h2 style=" font-family: 'Fira Sans', sans-serif; font-size: 1.2rem; margin-top: 5%; font-weight: 400;">[Aug 2021 - Present]</h2>
+              <h3 class="project-title" style="color: #004152;
+              font-family: 'Baloo Bhaijaan 2', cursive;
+              font-family: 'Comforter', cursive;
+              font-family: 'Quintessential', cursive; font-size: 1.7rem; margin-top: 15%;">NaturoChikitsa</h3>
+              <p class="project-details" style="margin-bottom: 13%; font-size: 1.2em; margin-top: 10%;">
+                A website contains various home remedies for treatments, healthcare, beauty and more.
+              </p>
+              <a href="https://naturochikitsa.com/" target="_blank" class="project-link btn">Check it Out</a>
+            </div>
+    
+            <div class="project-container project-card animate__animated animate__shakeX">
+              <h2 style=" font-family: 'Fira Sans', sans-serif; font-size: 2rem; margin-top: 15%; font-weight: 500;">Web Designer</h2>
+              <h2 style=" font-family: 'Fira Sans', sans-serif; font-size: 1.2rem; margin-top: 5%; font-weight: 400;">[Oct 2022 - Present]</h2>
+              <h3 class="project-title" style="color: #004152;
+              font-family: 'Baloo Bhaijaan 2', cursive;
+              font-family: 'Comforter', cursive;
+              font-family: 'Quintessential', cursive; font-size: 1.7rem; margin-top: 12%;">Ladli Foundation || Chamela Helpdia Charitable Trust</h3>
+              <p class="project-details" style="margin-bottom: 13%; font-size: 1.2em; margin-top: 7%;">
+                Working on the designing part of their offical sites.
+              </p>
+              <a href="https://www.ladliusa.org/" target="_blank" class="project-link btn">Check it Out</a>
+            </div>
+    
+    
+            <div class="project-container project-card animate__animated animate__shakeX">
+              <h2 style=" font-family: 'Fira Sans', sans-serif; font-size: 2rem; margin-top: 15%; font-weight: 500;">Graphic Designer</h2>
+              <h2 style=" font-family: 'Fira Sans', sans-serif; font-size: 1.2rem; margin-top: 5%; font-weight: 400;">[Sep 2021 - Present]</h2>
+              <h3 class="project-title" style="color: #004152;
+              font-family: 'Baloo Bhaijaan 2', cursive;
+              font-family: 'Comforter', cursive;
+              font-family: 'Quintessential', cursive; font-size: 1.7rem; margin-top: 15%;">Fiver || Creative Designs</h3>
+              <p class="project-details" style="margin-bottom: 13%; font-size: 1.2em; margin-top: 15%;">
+               Designing Logo, Flyers, Bussiness Card, Banners, Menu and many more.
+              </p>
+              <a href="https://www.instagram.com/_.creative_.designs/" target="_blank" class="project-link btn">Check it Out</a>
+            </div>
+            
+          </div>
+        </section>
+    </div>
+
+
+    <div class="container-sm">
+
+        <!-- Skills section -->
+        <section class="skills" id="skills" style="margin-bottom: 6%; margin-top: 8%; padding-bottom: 4%;">
+          <h2 style="font-size: 3rem;  margin-bottom: 4%; margin-top: 2%; padding-top: 3%;" class="edu" >My Skills</h2>
+          <div class="skills-wrapper">
+            <div class="first-set animate__animated animate__pulse">
+              <img
+                src="assets/images/html.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+
+                style="padding: 0%;"
+              />
+              <img
+                src="assets/images/csss.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+
+                style="padding: 0%;"
+              />
+              <img
+                src="assets/images/js.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+
+                style="padding: 0.6%;"
+              />
+            </div>
+    
+            <div class="second-set animate__animated animate__pulse">
+              <img
+                src="assets/images/boot.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                style="padding: 0%;"
+              />
+              <img
+                src="assets/images/White Black Modern Education Logo.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+    
+                style=" padding: 0.3%;"
+              />
+              <img
+                src="assets/images/www.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+    
+                style=" padding: 3%;"
+              />
+            </div>
+    
+            <div class="second-set animate__animated animate__pulse">
+              <img
+                src="assets/images/c11.jpg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+
+                style="padding: 3.5%;"
+              />
+              <img
+                src="assets/images/react.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+
+                style="padding: 0rem;"
+              />
+              <img
+                src="assets/images/d.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                style=" padding: 3%;"
+              />
+            </div>
+          </div>
+        </section>
+    
+        </div>
+
+        
+    <div class="container-sm">
+    
+        <!-- Contact section -->
+        <section class="contact" id="contact">
+          <h2 style="font-size: 3rem;  margin-bottom: 4%; margin-top: 2%; padding-top: 3%;" class="edu" >Contact Me</h2>
+          <div class="contact-form-container animate__animated animate__shakeX">
+            <div class="contact-form ">
+              <div class="socials" style="margin: auto;
+              text-align: center">
+                <!-- <a href="#" target="_blank"
+                  ><img
+                    src="assets/icons/icons8-twitter-circled.gif"
+                    alt="Twitter"
+                    loading="lazy"
+                    class="socicon"
+    
+                   
+                /></a> -->
+                <a href="https://www.instagram.com/_garima_.dhingra/" target="_blank"
+                  ><img
+                    src="assets/icons/icons8-instagram.gif"
+                    alt="Instagram"
+                    loading="lazy"
+                    class="socicon"
+                /></a>
+                <a href="https://www.linkedin.com/in/garima-dhingra-6417831ab/" target="_blank"
+                  ><img
+                    src="assets/icons/icons8-linkedin-circled.gif"
+                    alt="Linkedin"
+                    loading="lazy"
+                    class="socicon"
+                /></a>
+                <a href="#" target="_blank"
+                  ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+                /></a>
+              </div>
+          
+            </div>
+          </div>
+        </section>
+    </div>
+      </div>  
+      <div class="container-sm">
+        <!-- Social accounts - Fixed to the right -->
+        
+        <!-- Scroll to top -->
+        <i class="scroll-up" id="scroll-up"
+          ><img
+            src="assets/icons/icons8-upward-arrow.gif"
+            class="socicon up-arrow"
+            alt=""
+        /></i>
+    
+        <!-- Footer section -->
+        <footer>
+          <p class="copy">&copy; Copyright 2022</p>
+          <p class="copy">
+            Built with &#x2661; by
+            <a href="https://www.linkedin.com/in/garima-dhingra-6417831ab/" target="_blank"
+              >Garima Dhingra</a
+            >
+          </p>
+        </footer>
+       </div>
+      </div>
+    
+        <!-- Website scripts -->
+        <script src="assets/js/app.js"></script>
+    
+        <!-- Ion icons scripts -->
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
